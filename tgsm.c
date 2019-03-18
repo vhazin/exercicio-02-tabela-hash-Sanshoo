@@ -18,11 +18,14 @@ int main(){
   current = 1;
   for (int a = 0; a < matrix[0][0]; a++){
     for (a = 0; a < matrix[current][0]; a++){
-      
+      printf("%i -> ", a);
+      for (a = 0; a < matrix[current][1]; a++){
+        if (((matrix[current+1][a]) % (matrix[current][0])) == (a)){
+          printf("%i -> ", matrix[current+1][a]); 
+        }
+      printf("\\ \n");
+      }
     }
+    current = current+2;
   }  
-  
-
-
-
 }
